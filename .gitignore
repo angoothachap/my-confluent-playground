@@ -2,9 +2,5 @@ CRD-Kustomization/terraform/terraform.tfstate
 CRD-Kustomization/terraform/terraform.tfstate.backup
 CRD-Kustomization/terraform/test_kustomizations/.DS_Store
 CRD-Kustomization/terraform/.DS_Store
-CRD-Kustomization/terraform/.terraform.lock.hcl
-CRD-Kustomization/terraform/.terraform/providers/registry.terraform.io/hashicorp/helm/2.2.0/darwin_amd64/terraform-provider-helm_v2.2.0_x5
-CRD-Kustomization/terraform/.terraform/providers/registry.terraform.io/hashicorp/kubernetes/2.3.2/darwin_amd64/terraform-provider-kubernetes_v2.3.2_x5
-CRD-Kustomization/terraform/.terraform/providers/registry.terraform.io/kbst/kustomization/0.5.0/darwin_amd64/LICENSE
-CRD-Kustomization/terraform/.terraform/providers/registry.terraform.io/kbst/kustomization/0.5.0/darwin_amd64/README.md
-CRD-Kustomization/terraform/.terraform/providers/registry.terraform.io/kbst/kustomization/0.5.0/darwin_amd64/terraform-provider-kustomization_v0.5.0
+CRD-Kustomization/terraform/.terraform.*
+CRD-Kustomization/.DS_Store
