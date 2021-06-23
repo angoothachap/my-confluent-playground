@@ -1,4 +1,4 @@
-Confluent For Kubernetes today provides Custom Resource Definitions(CRDs) which are Kuberetes Operators to deploy Confluent Server a.k.a Confluent Platform(CP) 6.2
+Confluent For Kubernetes today provides Custom Resource Definitions(CRDs) which are Kuberetes Operators to deploy Confluent Platform(CP) 6.2
 
 Earlier versions of Confluent Operator - anything 1.x came with Helm Charts to deploy CP - until v6.1
 
@@ -14,7 +14,7 @@ Pre-requisites for doing this:
 3. K8s cluster (I spun up a GKE cluster using the sample [TF project](https://github.com/hashicorp/learn-terraform-provision-gke-cluster)
 
 Steps:
-1. Following the Quickstart demo documented [here](https://github.com/confluentinc/confluent-kubernetes-examples/tree/master/quickstart-deploy), ran below commands:
+1. Following the Quickstart demo documented [here](https://github.com/confluentinc/confluent-kubernetes-examples/tree/master/quickstart-deploy), ran below commands to deploy CFK(Confluent Operator 2.0):
     ```
     helm repo add confluentinc https://packages.confluent.io/helm
     helm upgrade --install operator confluentinc/confluent-for-kubernetes -n confluent
