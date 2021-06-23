@@ -1,0 +1,6 @@
+CRD-Kustomization/terraform/terraform.tfstate
+CRD-Kustomization/terraform/terraform.tfstate.backup
+CRD-Kustomization/terraform/test_kustomizations/.DS_Store
+CRD-Kustomization/terraform/.DS_Store
+CRD-Kustomization/terraform/.terraform.*
+CRD-Kustomization/.DS_Store
