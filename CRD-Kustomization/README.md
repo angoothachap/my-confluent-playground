@@ -21,7 +21,7 @@ Steps:
 
 2. The above code deploys CFK in the confluent namespace
 3. The quickstart also gives away a big yaml [file](https://github.com/confluentinc/confluent-kubernetes-examples/blob/master/quickstart-deploy/confluent-platform.yaml) that defines the whole Confluent cluster. I split this up into smaller files for readability and granularity. This makes up for one yaml file each for each Confluent Platform component a.k.a zookeeper, kafka, schema registry etc.
-4. [The kustomization.yaml](https://github.com/angoothachap/my-confluent-playground/blob/CRD-kustomization/CRD-Kustomization/terraform/test_kustomizations/resources/connect.yaml) file in this repo is a collection of what CRDs you want to deploy as part of your CP deployment
+4. [The kustomization.yaml](https://github.com/angoothachap/my-confluent-playground/blob/CRD-kustomization/CRD-Kustomization/terraform/test_kustomizations/resources/kustomization.yaml) file in this repo is a collection of what CRDs you want to deploy as part of your CP deployment
 4. Run the below commands to deploy your CRDs on the K8s cluster using TF
 ``` 
     rsubramanian@C02D % terraform init
