@@ -1,0 +1,10 @@
+{
+	"resources": [
+		"zookeeper.yaml",
+		"kafka.yaml",
+		"schemaregistry.yaml",
+    "ksql.yaml",
+    "connect.yaml",
+		"control-center.yaml"
+	]
+}
