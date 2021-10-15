@@ -33,6 +33,6 @@ Set up a KsqlDB Stream on the topic `sample` :
         
            That creates a push query which will keep emitting results as you produce to the topic sample.
            
-    ![query_result.png](query_result.png)
+    ![query_result](./query_result.png)
 ```
 
