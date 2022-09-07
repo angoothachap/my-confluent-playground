@@ -1,0 +1,302 @@
+{
+	"info": {
+		"_postman_id": "97382b81-ab09-4a3e-93ac-c5a2808eeb2c",
+		"name": "SR",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET subjects",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{SR_basic_auth_key_value}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{SR_basic_auth_key}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.schemaregistry.v1+json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://{{SR_host}}/subjects?subjectPrefix=:*:",
+					"protocol": "https",
+					"host": [
+						"{{SR_host}}"
+					],
+					"path": [
+						"subjects"
+					],
+					"query": [
+						{
+							"key": "subjectPrefix",
+							"value": ":*:"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET contexts",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{SR_basic_auth_key_value}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{SR_basic_auth_key}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.schemaregistry.v1+json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://{{SR_host}}/contexts",
+					"protocol": "https",
+					"host": [
+						"{{SR_host}}"
+					],
+					"path": [
+						"contexts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET schemas",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{SR_basic_auth_key_value}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{SR_basic_auth_key}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.schemaregistry.v1+json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://{{SR_host}}/schemas?subjectPrefix=:*:",
+					"protocol": "https",
+					"host": [
+						"{{SR_host}}"
+					],
+					"path": [
+						"",
+						"schemas"
+					],
+					"query": [
+						{
+							"key": "subjectPrefix",
+							"value": ":*:"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST schema in default context",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{SR_basic_auth_key_value}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{SR_basic_auth_key}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+json, application/json",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+json, application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"schema\": \"{\\n  \\\"$schema\\\": \\\"http://json-schema.org/draft-07/schema#\\\",\\n  \\\"$id\\\": \\\"http://example.com/myURI.schema.json\\\",\\n  \\\"title\\\": \\\"SampleRecord\\\",\\n  \\\"description\\\": \\\"Sample schema to help you get started.\\\",\\n  \\\"type\\\": \\\"object\\\",\\n  \\\"additionalProperties\\\": false,\\n  \\\"properties\\\": {\\n    \\\"test1\\\": {\\n      \\\"type\\\": \\\"integer\\\",\\n      \\\"description\\\": \\\"The integer type is used for integral numbers.\\\"\\n    },\\n    \\\"test2\\\": {\\n      \\\"type\\\": \\\"number\\\",\\n      \\\"description\\\": \\\"The number type is used for any numeric type, either integers or floating point numbers.\\\"\\n    },\\n    \\\"test3\\\": {\\n      \\\"type\\\": \\\"string\\\",\\n      \\\"description\\\": \\\"The string type is used for strings of text.\\\"\\n    }\\n  }\\n}\",\n\t\"schemaType\": \"JSON\",\n\t\"references\": []\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{SR_host}}/subjects/test/versions",
+					"protocol": "https",
+					"host": [
+						"{{SR_host}}"
+					],
+					"path": [
+						"subjects",
+						"test",
+						"versions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST schema in context us-east",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{SR_basic_auth_key_value}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{SR_basic_auth_key}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.schemaregistry.v1+json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"schema\": \"{\\n  \\\"$schema\\\": \\\"http://json-schema.org/draft-07/schema#\\\",\\n  \\\"$id\\\": \\\"http://example.com/myURI.schema.json\\\",\\n  \\\"title\\\": \\\"SampleRecord\\\",\\n  \\\"description\\\": \\\"Sample schema to help you get started.\\\",\\n  \\\"type\\\": \\\"object\\\",\\n  \\\"additionalProperties\\\": false,\\n  \\\"properties\\\": {\\n    \\\"test1\\\": {\\n      \\\"type\\\": \\\"integer\\\",\\n      \\\"description\\\": \\\"The integer type is used for integral numbers.\\\"\\n    },\\n    \\\"test2\\\": {\\n      \\\"type\\\": \\\"number\\\",\\n      \\\"description\\\": \\\"The number type is used for any numeric type, either integers or floating point numbers.\\\"\\n    },\\n    \\\"test3\\\": {\\n      \\\"type\\\": \\\"string\\\",\\n      \\\"description\\\": \\\"The string type is used for strings of text.\\\"\\n    }\\n  }\\n}\",\n\t\"schemaType\": \"JSON\",\n\t\"references\": []\n}"
+				},
+				"url": {
+					"raw": "https://{{SR_host}}/contexts/.us-east/subjects/test/versions/",
+					"protocol": "https",
+					"host": [
+						"{{SR_host}}"
+					],
+					"path": [
+						"contexts",
+						".us-east",
+						"subjects",
+						"test",
+						"versions",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST schema in context emea",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "+iPHQ9uFkKquZwmEsB8Z4BrwTfNm0ce+kbjKF2mPWce0dLcj4AGYvLNX4w/KqIEk",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "PU7DP6CLJ4F2SXTF",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.schemaregistry.v1+json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"schema\": \"{\\n  \\\"$schema\\\": \\\"http://json-schema.org/draft-07/schema#\\\",\\n  \\\"$id\\\": \\\"http://example.com/myURI.schema.json\\\",\\n  \\\"title\\\": \\\"SampleRecord\\\",\\n  \\\"description\\\": \\\"Sample schema to help you get started.\\\",\\n  \\\"type\\\": \\\"object\\\",\\n  \\\"additionalProperties\\\": false,\\n  \\\"properties\\\": {\\n    \\\"test1\\\": {\\n      \\\"type\\\": \\\"integer\\\",\\n      \\\"description\\\": \\\"The integer type is used for integral numbers.\\\"\\n    },\\n    \\\"test2\\\": {\\n      \\\"type\\\": \\\"number\\\",\\n      \\\"description\\\": \\\"The number type is used for any numeric type, either integers or floating point numbers.\\\"\\n    },\\n    \\\"test3\\\": {\\n      \\\"type\\\": \\\"string\\\",\\n      \\\"description\\\": \\\"The string type is used for strings of text.\\\"\\n    }\\n  }\\n}\",\n\t\"schemaType\": \"JSON\",\n\t\"references\": []\n}"
+				},
+				"url": {
+					"raw": "https://psrc-35wr2.us-central1.gcp.confluent.cloud/contexts/.emea/subjects/test/versions/",
+					"protocol": "https",
+					"host": [
+						"psrc-35wr2",
+						"us-central1",
+						"gcp",
+						"confluent",
+						"cloud"
+					],
+					"path": [
+						"contexts",
+						".emea",
+						"subjects",
+						"test",
+						"versions",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
