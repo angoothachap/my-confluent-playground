@@ -16,6 +16,6 @@
 		"type": "string",
 		"description": "The string type is used for strings of text."
 	}
-}```
+}
 
  
