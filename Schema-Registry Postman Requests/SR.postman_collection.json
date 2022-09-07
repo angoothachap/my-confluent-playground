@@ -254,12 +254,12 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "+iPHQ9uFkKquZwmEsB8Z4BrwTfNm0ce+kbjKF2mPWce0dLcj4AGYvLNX4w/KqIEk",
+							"value": "{{SR_basic_auth_key_value}}",
 							"type": "string"
 						},
 						{
 							"key": "username",
-							"value": "PU7DP6CLJ4F2SXTF",
+							"value": "{{SR_basic_auth_key}}",
 							"type": "string"
 						}
 					]
