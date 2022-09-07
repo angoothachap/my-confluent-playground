@@ -277,14 +277,10 @@
 					"raw": "{\n\t\"schema\": \"{\\n  \\\"$schema\\\": \\\"http://json-schema.org/draft-07/schema#\\\",\\n  \\\"$id\\\": \\\"http://example.com/myURI.schema.json\\\",\\n  \\\"title\\\": \\\"SampleRecord\\\",\\n  \\\"description\\\": \\\"Sample schema to help you get started.\\\",\\n  \\\"type\\\": \\\"object\\\",\\n  \\\"additionalProperties\\\": false,\\n  \\\"properties\\\": {\\n    \\\"test1\\\": {\\n      \\\"type\\\": \\\"integer\\\",\\n      \\\"description\\\": \\\"The integer type is used for integral numbers.\\\"\\n    },\\n    \\\"test2\\\": {\\n      \\\"type\\\": \\\"number\\\",\\n      \\\"description\\\": \\\"The number type is used for any numeric type, either integers or floating point numbers.\\\"\\n    },\\n    \\\"test3\\\": {\\n      \\\"type\\\": \\\"string\\\",\\n      \\\"description\\\": \\\"The string type is used for strings of text.\\\"\\n    }\\n  }\\n}\",\n\t\"schemaType\": \"JSON\",\n\t\"references\": []\n}"
 				},
 				"url": {
-					"raw": "https://psrc-35wr2.us-central1.gcp.confluent.cloud/contexts/.emea/subjects/test/versions/",
+					"raw": "https://{{SR_host}}/contexts/.emea/subjects/test/versions/",
 					"protocol": "https",
 					"host": [
-						"psrc-35wr2",
-						"us-central1",
-						"gcp",
-						"confluent",
-						"cloud"
+						"{{SR_host}}"
 					],
 					"path": [
 						"contexts",
